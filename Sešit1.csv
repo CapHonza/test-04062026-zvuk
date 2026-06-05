@@ -1,0 +1,301 @@
+﻿;
+1. Co je to počítačová grafika - alespoň 2 významy.;označení pro výstup popisu objektů - grafická data, procesy zpracovávání grafické informace pomocí počítače, oblast výpočetní techniky
+2. Co je to OCR a jaké programy ho používají?;"Optical Character Recognition - optické rozpoznání znaků; metoda, která umožňuje scanneru digitalizaci tištěných textů, s nimiž pak lze pracovat jako s normálním počítačovým textem; použití - AdobeReader, Recognite"
+3. Uveďte základní zdroje grafických dat pro zpracování či využití na počítači.;2D nebo 3D předloha, předloha sejmutá z obrazovky, existující data (clipart, Internet…), data vytvořená bitmapovým či grafickým editorem, data získaná OCR technologiemi
+4. Jak se jmenoval první PC s grafickým rozhraním a kdy vznikl?;Xerox Star, 1981
+5. Základní typy rozhraní.;rozhraní s příkazovým řádkem, textové celoobrazovkové rozhraní, rozhraní plně grafické
+6. Jaký je rozdíl mezi textovým a grafickým režimem zobrazení na obrazovce?;textový režim si zobrazované objekty volá kódem z grafické karty, v grafickém režimu jsou objekty zobrazovány z bodu
+7. Co jsou to primitiva?;"elementární prvky obrazu, patří mezi základní grafické prvky; body, přímky, úsečky, lomené čáry, kružnice, křivky, mnohoúhelníky, text"
+8. základní grafické prvky;primitiva, obrysy, výplně, texty
+9. grafická data;popis objektu grafického charakteru
+10. grafické soubory;soubory obsahující základní grafická data
+11. formát souboru;způsob jakým jsou data, která tvoří soubor, uložena do vnějších paměťových struktur počítače, jak se přenášejí v datovém toku a jak se obnovují
+12. grafický formát;standard definující efektivní a logický způsob popisu a zpracování grafických dat a jejich další vlastnosti (ukládání, přenášení, organizování, obnovování)
+13. metody popisu grafických dat;metoda rastrového popisu, metoda matice, metoda kvadrátového stromu, metoda vektorového popisu
+14. Jaká je hlavní metoda rastrového popisu grafických dat?;popis objektu pomocí bodů/pixelů
+15. Co jsou to bitmapová data?;číselné hodnoty popisující jednotlivé základní prvky obrazu - obrazové body (pixely) v euklidovském prostoru
+16. Co je to kvadrátový strom a kde se používá?;metoda popisu grafických dat, algoritmus rozděluje obraz na čtvere, testuje jejich pokrytí a pokračuje v dělení, vhodné při větších stejně barevných plochách
+17. Co jsou to vektorová data?;číselné hodnoty popisující elementární prvky obrazu - primitiva
+18. Nevýhody bitmapové grafiky ve srovnání s vektorovou.;velikost výsledného souboru, pomalejší zpracování a zobrazení, nevhodnost pro transformace
+19. Z čeho se skládá bitmapový grafický soubor?;hlavička, zakódovaná grafická data, pata
+20. Co obsahuje hlavička grafického souboru?;informace nutné k interpretaci grafických dat definující verzi grafického formátu, způsob uložení grafických dat, barevná hloubka, velikost obrazu, informace o případné použité kompresní metodě
+21. nepřímé vyjádření (index mode);hodnotou atributu index je odkaz do barevné palety, tabulka barev  je umístěna obvykle v patě souboru
+22. Jak mohou být nepřímo vyjádřeny barvy?;indexem, odkazem do palety barev
+23. přímé vyjádření (true color mode);hodnotou barvového atributu pixelu je absolutní vyjádření barevného odstínu číselnými hodnotami dle barevného modelu
+24. barevná hloubka;udává, kolik bitů je vyhrazeno pro přenos barevné informace o jednom bodu
+25. Jakou barevnou hloubku má obrázek, jehož každý pixel je vyjádřen 48b?;48b
+26. Kolik barev může mít obrázek, jehož každý pixel je vyjádřen 3b?;2 na 3 = 8 barev
+27. Co je to bitová hloubka?;počet bitů potřebných k vyjádření atributu jednoho pixelu
+28. Co značí alfa kanál?;průhlednost bodu
+29. Jaké atributy pixelu může vyjadřovat bitová hloubka?;barvu, průhlednost…
+30. definice bodu;V karteziánském souřadnic. sys dvěma body [xx,xy] a v polarnim souradnic.sys delka a uhel v rad.
+31. Uvedte 2 způsoby definice úsečky ve 2D prostoru. ;V karteziánském souřadnic. sys dvěma body [xx,xy], popř. bodem a vektorem, a v polarnim souradnic.sys delkou a uhlem v rad., obvykle i včetně atributu barvy (RGB)
+32. definice křivky;Je-li M nějaký matematický prostor a I interval reálných čísel, pak křivkou k rozumíme spojité zobrazení z I do M. interpolační Fergusovy kubiky (2 řídící body - směr a 2 řídící tečny - vyklenutí) a aproximační Beziérovy křivky (řídící body)
+33. Co jsou to kubiky a jaké druhy znáte?;interpolační křivky procházející všemi vrcholy řídícího polygonu, určují tvar křivky, 2 druhy - Fergusovy a Beziérovy
+34. Kolika body je obvykle vyjádřena Baziérova křivka?;obvykle čtyřmi (kubika)
+35. Interpolační a aproximační křivka - rozdíly a definice.;"interpolační Fergusovy kubiky (2 řídící body - směr a 2 řídící tečny - vyklenutí; křivka prochází všemi body) a aproximační Beziérovy křivky (řídící body, křivka jimi nemusí procházet)"
+36. 2 způsoby definice tělesa v prostoru;hraniční reprezentace(popisuje množinu hraničních bodů tělesa pomocí vrcholových bodů, hran nebo ploch) nebo konstruktivní geometrie(modelovaní složitějších těles z jednoduchých geometrických tvarů metodou CSG stromů)
+37. textura;obrázek definující povrch objektu, rastrová nebo procedurální
+38. texel;základní jednotka textury
+39. voxel;obdoba pixelu pro speciální prostorové zobrazení ve 3D mřížce
+40. Co je to rendrování a kde se používá?;"přepočet, výsledný výpočet scény; používá se při potahování 3D objektů texturou"
+41. Z-buffer;paměť hloubky, uchovává hloubkovou hodnotu scény ve vrstvách pomocí Z-bufferové hodnoty pixelu
+42. Z-culling;při vykreslování 3D scény, spočtena barva pro pixely, pak Z-Test, jestli nebyl vykreslen pixel, který měl být v popředí
+;
+43. Co je světlo;viditelné elektromagnetické záření
+44. Jakou barvu bude mít světlo o 520nm?;zelená (560 - 500 nm)
+45. Jaká barva je ustanovená 700nm?;červená (760 - 620 nm)
+46. vlnové délky viditelného světla;760 - 380 nm
+47. 430 - 380 nm;fialové světlo
+48. Jaký je důvod rozkladu světla na hranolu?;různé vlnové délky mají rozdílný index lomu
+49. achromatické světlo;nepestré, světlo obsahuje všechny vlnové délky o přibližně stejné intenzitě
+50. chromatické světlo;pestré, dominuje ve světle některá vlnová délka
+51. Jaké fyzikálí vlastnosti má světlo?;vlnová dělka, intenzita, purita, polarizace
+52. opacita;"propustnost, odraznost; intenzita propuštěného nebo odraženého světla"
+53. denzita;desítkový logaritmus opacity
+54. Čeho je jednotkou lux a čeho lumen?;lux - osvětlení - intenzita osvětlení, lumen - světelný tok (světelná energie)
+55. kandela;svítivost - intenzita světla
+56. Co je to světelný tok a jaké má jednotky?;světelná energie, kterou zdroj světla vyjádří za 1s do všech směrů, jednotky lumen
+57. Co je to odstín barvy a čím je dán?;je dán domiantní vlnovou délku ve spektru, určuje druh barvy a dává barvě její název
+58. percepční vlastnosti světla;jas, odstín, sytost, světlost, barevná teplota
+59. jasový rozsah;minimální až maximální rozsah pro konkrétní zařízení
+60. jasový kontrast;poměrem jasů nejsvětlejšího a nejtmavšího místa v obraze
+61. Jasové transformace obrazu;a) transformace bodové (úprava histogramu obrazu), b) transformace jasové stupnice (např. zesvětlení, snížení kontrastu)
+62. jasová denzita;nejtmavší a nejsvětlejší rozpoznatelný odstín šedi
+63. Nejmenší bod viditelný okem;30 µm = 0,03 mm
+64. vidění skotopické  a fotooptické;skotopické (noční vidění)- tyčinky, fotopické (barevné vidění), zajišťují 3 typy čípků s citlivostí na modro-fialové, zeleno-žluté a červeno-žluté světlo
+65. optický klam;optická iluze neodpovídající objektivní skutečnosti způsobená funkčním a anatomickým uspořádáním zrakového analyzátoru či psychologickými pochody v mozkové kůře.
+66. Co je to Purkyňův jev?;klesá-li osvětlení, posouvá se maximum citlivosti oka ke kratším vlnovým délkám
+67. Talbotův zákon;vjem nad kmitočtem splynutí je stejný jako při působení trvalého podnětu se stejnou průměrnou energií (časová rozlišovací schopnost oka)
+68. denzita lidského oka;týká se jasového rozsahu lidského oka, její hodnota je 6
+69.  ;
+70. Co je to illuminant D65?;smluvní světlo pro definici bílé v RGB, odpovídá polednímu světlu v změ v Evropě, 6500K
+71. illuminant D50;pro praxi DTP a přípravu tisku, odpovídá slunci 2 hod po východu slunce v létě v Evropě, 5000K
+72. Co je to metamerie?;metamery, odlišná (stjná) světla mohou při určitém osvětlení evokovat stejnou (různou) vnímanou barvu
+73. Co je to binokulární paralaxa?;sítnicová nerovnost objektů
+74. monokulární paralaxa;pohybová paralaxa, zdánlivý vzájemný pohyb objektů
+75. akomodace ;přeostření
+76. konvergence;změna sbíhavosti os očí
+77. Jaké barevné modely jsou vytvářené podle modelu lidského vidění?;CIE L*S*h°, HSV (HSB), HLS, RGB, CMY, CMYK
+78. Jaké znáte procesní modely barev?;RGB, CMYK, HSV, HLS, CIE Lab
+79. Co je to gamut?;dosažitelná oblast barev v určitém barevném prostoru
+80. Jaká je doplňková barva k purpurové, žluté a azurové?;purpurová - zelená, žlutá - modrá, azurová - červená
+81. základní barvy, primární barvy;obvykle 3 monochromatické barvy, které nejde namíchat z ostatních barev a naopak pomocí nichž jdou namíchat všechny ostatní barvy
+82. sekundární barvy;vytvořené skládáním primárních barev daného barevného prostoru
+83. terciální barvy;vznikají smícháním primárních a sekundárních barev daného barevného prostoru
+84. doplňkové barvy;dvojice barev, jejichž frekvence se v daném barevném modelu vzájemně vylučují
+85. Jaké byly základný barvy podle Jacoba Le Blon?;RYB - červená, žlutá a modrá
+86. chromatické barvy;definovány jedinou frekvencí jako čisté
+87. spektrální barvy;všechny chromatické odstíny daného zářiče
+88. nespektrální barvy;nejsou obsaženy v čistém spektru světla
+89. Co jsou to procesní a přímé barvy?;"procesní - vytvářené dle pravidel daného barevného modelu; přímé - obvykle definované refenrenčním vzorníkem barev"
+90. Které barevné modely přímo navazují na Munsellův systém popisu barev?;CIE L*C*h°, HSV (HSB), HLS
+91. Munsellův systém popisu barev;zohledňuje lidské pojetí tvorby barev, popisuje barvu třemi základními vlastnostmi: barevný tón, jas, sytost
+92. NCS;"Natural Color Systém, vytvořen s cílem definovat jakýkoli přírodní odstín; každou barvu lze vytvořit kombinací 6 základních barev: bílá, černá, červená, modrá, zelená, žlutá"
+93. Jaký procesní model používáte, pokud se jedná o aditivně-součtové míchání směrem k bílé?;RGB
+94. Bílá a žlutá v RGB?;1-1-1, 1-1-0
+95. RGB model;"vyzařovací model založený na aditivním-součtovém míchání směrem k bílé; pro popis odstínů adičního prostoru používá 3 barvy - červená, zelená, modrá"
+96. Zápis hodnot CMY bílé a žluté za předpokladu, že hodnoty jsou 1 a 0.;bílá - 0-0-0, žlutá 0-0-1
+97. barevný model CMYK;"odrazný model založený na mícháním subtraktivním (odečítání od bílé); smícháním dvou barev získáme barvu tmavší; nepracuje se světly, ale s pigmenty, inkousty a dalšími materiály přenášenými na potiskované médium; CMYK - azurová, purpurová, žlutá, černá"
+98. Který gamut - RGB nebo CMYK je bližší gamutu lidského oka?;RGB
+99. Proč je vnímání barvy tělesa a výtisku závislé na světelných podmínkách?;protože barevný vjem je kombinací vlnových délek vyzařovaných zdrojem světla a odražených od objektu
+100. Jak probíhalo definování nezávislého barevného prostoru?;protože barevné prostory byly půvedně závislé na zařízeních, která je zobrazovaly - pokusy, výdledek stejný barevný vjem se dá vyvolat skládáním několika světel
+101. Jaké jsou barevné modely na základě CIE?/Na čem jsou nezávislé barev.prostory CIE?;nezávislé na zařízení a vlastnostech pozorovatele
+102. Kde se nachází všechny sytosti určité barvy v barevném prostoru CIE Yxy?;na spojnici bílého bodu a příslušného bodu na kraji
+103. Kde leží spektrální a kde nespektrální barvy v diagramech CIE?;po obvodu spektrální a na spojnici nespektrální
+104. CIE LAB;definuje barvu trojicí hodnot: jasovou složkou, polohou odstínu na červeno-zelené a žluto-modré ose
+105. V kterém barevném modelu se zobrazuje barva úhlem?;CIE L*C*h°
+106. CIE LUV;model zcela anaogický CIE LAB
+107. Jaký je gamut CIE L*u*v* oproti gramutu lidského vidění?;jsou totožné
+108. Na co jsou ICC profily?;slouží pro převod přístrojově závislých údajů na barvy vyjádřené pomocí nezávislého barevného prostoru
+109. ICC;International Color Consortium, bylo ustanoveno v roce 1993 pro standardizaci systému správy barev
+110. Jaké parametry jsou užívány pro HSB (HSV)?;odstín, sytost, jas
+111. Co znamenají zkratky HSB a HSL?;"oba jsou to barevné modely využívající Munsellova barevného systému; HLS - hue (odstín), lightness (světlost) a saturation (sytost); HSB - hue (odstín), saturation (sytost) a brightness (jas)"
+112. Jaké jiné procesní modely barev na PC znáte než RGB a CMYK? Napište, co znamenají jejich zkratky.;HLS (odstín, světlost, sytost), HSB (HSV) (odstín, sytost, jas)
+113. Jaké nedostatky má barevný model HSB?;"přechod mezi černou a bílou není plynulý + změna barevného tónu není plynulá; proto zaveden barevný model HLS"
+114. Převod z RGB do Grey scale;provádí se postupným přepočtem jasu jednotlivých pixelů dle matematického vzorce
+115. Kolik odstínů má grey scale?;obvyle 256
+116. Vyjmenuj základní druhy světlocitlivých čipů.;CCD, Super CCD, CMOS, Foveon X3
+117. Co je podstatou fotoefekt?;"fotoelektrický jev, u světlocitlivých snímacích prvků; foton při nárazu do atomu polovodiče dokáže přemístit některý z jeho elektronů ze základního do excitovaného stavu, vzniklý el. náboj odpovídá intenzitě světla"
+118. Proč se více projevuje barevná tma při vyšší citlivosti?;protože při vyšší citlivosti vzniká vyšší šum, kterýje pak zařízením vyhodnocován jako dopadající světlo
+119. Co změníme, pokud zvýšíme citlivost u digitálních fotoaparátů a videokamer?;ISO (DIN, ASA), zesílíme signál a tím i šum => kratší čas expozice, popř. je zapotřebí méně světla,
+120. Co se stane s množstvím světla, když u digitálního fotoaparátu dvakrát zvýšíme citlivost?;o polovinu se sníží
+121. Jak zvýšíme citlivost u snímačů?;zesílením signálu a dopočtem
+122. Který druh skenování je nejrychlejší?;plošný sken
+123. Vyjmenuj základní druhy skenování a jaký je nejpomalejší?;prokládaný sken, progresivní (nejpomalejší) sken, plošný sken
+124. prokládaný sken;"náboje přecházejí z buněk nejprve do pomocných registrů a teprve z nich postupují do hlavního registru a poté do zesilovače a A/D převodníku; výrobně nejsnažší; kvalitní a rychlý; použití hlavně pro kamery"
+125. progresivní sken;"náboje ""propadají"" po řadách přímo do hlavního registru a dále do zesilovače a A/D převodníku; kvalitnější, ale pomalejší; standard fotopřístroje"
+126. plošný sken;všechny náboje najednou do přenosného registru, moderní a nejrychlejší
+127. Co je to podpálená černá?;"vyskytuje se u poruchy dynamického rozsahu; na určité buňky dopadá méně světla, než odpovídá nastavené hodnotě 0, buňky již nereagují a obraz se v těchto místech ztrácí"
+128. přepálená bílá;"u dynamického rozsahu, na něktré buňky dopadá více světla, než odpovídá maximální hodnotě; buňky nejsou schopny reagovat a obraz se v těchto místech opět ztrácí"
+129. blooming;u dynamického rozsahu, na něktré buňky dopadá příliš intenzivní světlo (přepálená bílá), přebytečné elektrony se roztečou do okolních buněk a na obraze vzniknou bílé čáry nebo plošky
+130. Co je to dynamický rozsah?;udává rozsah odstínů od nejčernější černé k nejbělejší bílé, kterou je ještě snímač schopen rozlišit
+131. Čím je limitován dynamický rozsah?;shora kapacitou každé buňky a zdola hladinou vlastního šumu buňky
+132. Co určuje rozlišení u snímacího prvku?;udává, kolik pixelů vodorovně a kolik svisle je senzor schopný rozeznávat
+133. Popište jak funguje CCD čip.;"zařízení pracující s propojeným nábojem; elektronický integrovaný obvod, ve kterém je elektrický náboj generovaný na základě fotoefektu ve fotodiodách obrazových elementů přenášen potencionálními jámami pomocí napětí na soustavě elektrod; uspořádání může být jednovrstevné, lineární nebo plošné"
+134. Kolik(cca)plnobar.pixelů získáme z obr.snímače typu CCD obsahujícího 20 milionů světločiv. buněk?;skoro 1:1, tj. stejný počet cca 20 milionů
+135. Jak zvýší Super CCD svůj dynamický rozsah bez zvýšení šumu?;"virtuálně se rozdělí na dva snímací čipy, jejchž matice se prolínají, jeden se nastaví, aby byl citlivější v oblasti vysokého svitu, a druhý v oblasi nízkého svitu; následně jsou data z obou virtuálních čipů sjednocena; nejvíce se používá v případě vysokého kontrastu"
+136. Proč nemůže používat scanner 46b bitovou hloubku?;"RGB má 3 barevné odstíny, kterými se ustanovuje barevná hloubka; pokud není dané číslo dělitelné 3, není vhodné a dokonce nelze ustanovit danou požadovanou barevnou hloubku"
+137. Kolik odstínů červené může rozlišit skener, který max. bar. hloubku 36b?;12b na kanál, tj. 2 na 12tou je 4096 odstínů červené
+138. Jak pracují 3D skenery s aktivní triangulací? ;Měří úhel mezi paprskem promítaného vzoru a odraženým světlem (triangulační trojúhelník)
+139. Jak pracují 3D skenery s pasivní triangulací? ;Měří se úhlová paralaxa - úhel mezi dvěma sdruženými paprsky dopadajícími na dva snímače (obdoba zraku)
+140. Vysvětlete základní princip skenerů.;"převod grafických předloh do digitální formy pro zpracování počítačem; posuvná snímací jednotka ustanovujeatributy pixelu z velikosti intenzity odraženého světelného paprsku od předlohy"
+141. Druhy osvětlení skenerů.;"profi - postupný osvit 3 RGB světly, standard - studená fluorescenční katodová lampa; postupné osvětlování předlohy řádkou tříbarevných RGB LED diod"
+142. druhy snímačů s čidly;snímače CCD, CIS a speciální (lineární či plošné)
+143. Vyjmenuj hlavní druhy skenerů.;ploché stolní, ploché zabudované, ploché speciální, vtahovací, ruční, filmové, velkoformátové, bubnové, 3D skenery
+144. Uveďte standardní DPI skenerů.;1200 - 2400 dpi
+145. Jaké snímací zařízení se používá u levnějších skenerů?;"jednořádkový CIS snímač; jsou bez optiky, osvit 3x RGB LED diody"
+146. Co je to interference při skenování?;při snímání jedné barvy se tato barva projevuje jako více odstínů, může dojít k moiré. závislost lpi tištěné předlohy a nastaveným rozlišením skeneru. V případě skenu pravidelných a málo odlišných rasterů může dojít k moire.
+147. V jakých jednotkách a co vyjadřuje barevná hloubka u skenerů?;udává se v bitech, vyjadřuje, kolik odstínů může skener rozlišit
+148. Co je to moiré efekt?;rušivý vzorek interferencí dvou pravidelných a jen málo odlišných rastrů (frekvencí),Obě frekvence se potom mohou střetnout, Tím se vytvoří nový vzorek, který má periodu vzdálenější než vzorky původní
+149. U jakého typu předloh může dojít při skenování k interferenci a vznku moire?;lpi tištěné předlohy versus nastavené rozlišení skeneru, u dvou pravidelných jen málo odlišnách rastrů, např. textury s periodickým vzorem
+150. V čem spočívá hlavní nevýhoda digitálního obrazu oproti obrazu z reálného světa?;digitální obraz nemá hloubku - chybí mu prostor + musí vždy projít procesem digitalizace, nějakým zjednodušením
+151. Popište dopřednou Fourierovu transformaci.;proces převodu obrazu reprezentovaného v časové oblasti do frekvenční oblasti
+152. Jak se nazývá postup převádění digitálních dat do frekvenční podoby?;Fourierova transformace
+153. V jakých částech probíhá digitalizace a co znamenají?;"proces kvantování a vzorkování; kvantování - počet diskretizace spojeným hodnot; vzorkování - zaznamenání hodnot spojité funkce v předem daných intrvalech"
+154. Kvantování - jak ovlivňuje počet kvantizačních úrovní kvantizační chybu?;čím více kvantizačních úrovní, tím je chyba menší
+155. Co je kvantizační chyba a co ovlivńuje její velikost?;částečná ztráta informace, vzniká kvantováním/převodem spojitého signálu na diskrétní, velikost kvant.intervalu přímo ovlivńje chybu
+156. kvantování;proces, kdy se spojité hodnoty převádějí na celočíselný obsah
+157. Machův efekt (jev);při kvantování, na hranici dvou přechodů nebo přechodu a plochy se světlá barva jeví jako ještě světlejší a tmavá jako ještě tmavší
+158. posterizace;jasové pruhy v obraze, vznikají při kvantizaci, oko je na rozdíl jasu velmi citlivé
+159. uniformní a neuniformní kvantizace;"uniformní - rovnoměrně velké intervaly, častější; neuniformní - různě velké intervaly, menší kvantizační chyba"
+160. Vzorkování - jak předejít chybě vzorkování?;nutný dostatečný počet vzorků, použití nepravidelného vzorkovacího rastru
+161. Co je to vzorkovací chyba?;při vzorkování není informace kompletní - části chybí, proto se vytváří vzorkovací chyba
+162. vzorkování;"při vzorkování (sampling) odebírány vzorky ve zvoleném intervalu ze spojité funkce; převod spojité funkce na nespojitou"
+163. Jaký je vztah mezi hodnotou vzorkovací frekvence a mírou chyby vzorkování?;Vzniká vzorkováním, Dle schanona vzorkovací frekvence je min 2x vyšší než modulační frekvence, vzniká při převodu spojitého na digi signál a je přímo závislá na zvolených intervalech mezi vzorky, tj. na vzorkovací frekvenci
+164. V čem spočívá Shannonův vzorkovací teorém?;používá se u vzorkování, vzorkovací frekvence musí být nejméně 2x větší než nejvyšší modulační frekvence
+165. Na jakém principu funguje nepravidelný vzorkovací rastr?;body nejsou pravidelně uspořádány jako u pravidelného vzorkovacího rastru (na pravidelnost je lidské oko velmi citlivé), každý bod má jistou pravděpodobnost zásahu, převádí alias na šum, cesta k minimalizaci aliasu
+166. pravidelný vzorkovací rastr;body odebírány do pravidelného rastru
+167. V čem spočívá a jakou výhodu má vzorkování s nepravidelným vzor.rasterem?;stochastic sampling - převod aliasu na šum, lepší cesta k odstaranění aliasu či moire, využívá toho, že oko je citlivé na pravidlenosti
+168. Jakým způsobem funguje Super sampling a v čem je lepší než point sampling?;metody prav.vzorkovacího rasteru, Navzorkuje plošku super pixelu, hodnota barvy se určí průměrem a vše se převede do konečného rozlišení - jedna z metod antialiasingu, point sampling bere vzorek pouze ze středu pixelu.
+169. Napiš 2 druhy nejpoužívanějšího rastru.;pravidelný a nepravidelný
+170. alias;falešné objekty a tvary, tzn. artefakty na obraze
+171. Vysvětlete příčinu vzniku prostorového aliasu v digit.obraze.;Podvzorkování čar a hran, popř. u pravidelných textur, v případě, že je vzor textury menší než rozlišení obrazu. Zubatost - při podvzorkování, moire - pri podvzorkování a zmenšení s použitou peiodickou texturou.
+172. Jaké jsou druhy aliasu?;prostorový alias (zubaté rany objektu, moiré) a časový alias (kola se otáčejí obráceně, pohybující se objekty jsou rozmazané…)
+173. metody antialisingu;zvýšení frekvence vzorkování, převedení aliasu na šum, rozmazání ostrých hran, použití nepravidelného vzorkovacího rastru, MIP-mapping, FSAA (celoplošný antialising obrazovky)
+174. antialiasing;"prevence nebo potlačení aliasu; částečné rozmazání ostrých hran objektů, kompromis mezi věrností a rozmazáním obrazu"
+175. Jak převést přímku do rastru bez aliasu?;rozmazáním ostrých hran (přidáme více odstínů šedé do okolí hrany přímky, odstraníme tak zubaté hrany), Rasterizace geometrického zobrazení se provádí např. aplikací Bresenhamova algoritmu nalezením bližšího z možných bodů rastru
+176. Kdy se uplatňuje Bresenhamův algoritmus a v čem spočívá?;k rasterizaci geometrického zobrazení?
+177. Co je to dpi a jaké údaje o obraze potřebuju k jeho vypočítání?;"bodů na palec; potřebujeme vědět, kolik bodů má obrázek na výšku i na šířku a jaké jsou jeho skutečné rozměry"
+178. Co je to ppi a k čemu se používá?;počet pixelů na palec, používá se k udání rozlišení
+179. Pro co se udávají jednotky lpi?;počet linek na palec, udává hustotu polotónového tiskového rastru a tím i jeho kvalitu
+180. Pro co se udávají jednotky cpi?;pro rozteč, udává počet znaků na palec (characters per inch)
+181. Jaké je rozlišení, je-li obraz tvořen 16 mil. body?;4000x4000, (4:3), (16:9) 15840x9900
+182. Jaké standardní rozlišení umožňuje paměť 1MB?;640x480 při 16ti bitové barevné hloubce
+183. Co znamená zkratka UXGA?;jedno ze standardních rozlišení grafické karty nebo monitoru, Ultra eXtended Graphics Array
+184. Která ze zákl.metod interpolace je nejefektivnější a proč?;metoda kubická, resp. bikubická, zohledňuje při výpočtu hodnoty pixelu hodnoty okolních 16 pixelů.
+185. Co je to interpolace, kde a proč se používá?;"metoda, při níž se výpočtem uměle zvyšuje, resp. snižuje počet počet pixelů; produkuje nové pixely na základě pixelů existujících; použití u digitálního zoomu fotoaparátů a u scannerů pro ustanovení maximálního optimálního rozlišení"
+186. interpolace - metoda nejbližšího souseda;nejjednodušší, nový pixel přebírá vlastost pedchozího
+187. interpolace lineární;nová hodnota se vypočte jako vážený průměr dvou sousedních pixelů
+188. druhy interpolace;metoda nejbližšího souseda, interpolace lineární, interpolace kubická, (bilineární, bikubická)
+189. Jaké činnosti probíhají při převzorkování?;nejprve je třeba nalézt spojitý obraz (vzor) k existujícímu diskrétnímu obrazu, provést transformaci a poté znovu navzorkování
+190. Co je to resampling?;"převzorkování - nové navzorkování; změna rozlišení a barevné hloubky"
+191. Kolik barev bude mít paleta 3-3-2?;"R 3b - 8 odstínů, G 3b - 8 odstínů, B 2b - 4 odstíny; celkem tedy 8*8*4 = 256"
+192. Kolik odstínů červené bude mít obrázek s barevnou hloubkou 36 b?;36b: 12-12-12, R 12b - 2 na 12 odstínů
+193. Kolik odstínů červené může rozlišit skener, který max. bar. hloubku 36b?;12b na kanál, tj. 2 na 12tou je 4096 odstínů červené
+194. adaptivní barevná paleta;vytvářejí se podle barev, které se v konkrétním obraze skutečně vyskytují, jsou uloženy spolu s obrazem
+195. barevná paleta;jednorozměrné pole hodnot barev
+196. univerzální pevné barevné palety;"předem dány, použitelné pro libovolný obraz; obsahují univerzální barvy, které se v konkrétním obraze vůbec nemusí vyskytovat"
+197. Jaká je standardní velikost grafické paměti na zobrazení v režimu XGA a TrueColor?;24b
+198. Půltónování - prahování v matici;"rozptyl v matici, metoda vzorů; náhrada pixelu s určitou úrovní jasu vzorem rozměru n x m, jehož body vytvářejí dojem jasu požadovaného"
+199. V čem spočívá technika půltónování metodou distribuce chyby - chybová difuze - dithering;pro 1.načtený pixel obrazu se najde v paletě nejbližší barva a určí se rozdíl, tj. chyba. Podle aplik.algoritmu se stanoví, jakou frakci chyby přeberou sousední pixely. Dochází k postupnému rozkládání chyby do okolních pixelů
+200. Co je to a co vyjadřuje histogram?;graf absolutních četností jednotlivých jasových hodnot zastoupených v celém obrazu
+201. Ekvalizace histogramu ;použití algoritmů, které změní rozložení intenzit v obraze tak, aby se vyskytovaly intenzity v širším rozmezí
+202. vyvážený histogram;obsahuje celou škálu jasu (graf - 2 hrbolky, ne moc velké výkyvy, nepřesahují šipky ale přesně se jich dotýkají)
+203. Kolik úrovní jasu má obvykle digitální fotoaparát?;256
+204. NAkreslete, jak přibližně vypadá histogram dobře exponovaného ČB snímku?;
+205. Co značí gamma korekce?;"postup, kterým se koriguje jasové zkreslení obraz při zobrazování nebo při tisku; linerní (zesvětlení nebo ztmavení) nebo nelineární projasnění; Weberův zákon: Nejmenší rozlišitelný rozdíl počitku roste   s velikostí či intenzitou podnětu"
+206. gamma;"míra jasového zkreslení obrazu; hodnota gamma 1.0 - neupravený obraz"
+207. gamma křivka;exponenciální křivka, hodnota gamma je její exponent
+208. Jak se rozdělují grafické formáty podle komprese?;nekomprimované a komprimované
+209. Jak se rozdělují grafické formáty podle zachování informace?;bezztrátové a ztrátové
+210. Jak se rozdělují grafické formáty podle způsobu uložení (zakódování) grafických dat?;bitmapové, vektorové, metaformáty
+211. Jak se rozdělují grafické formáty podle doby komprese?;"použité symetrické nebo asymetrické komprimační logaritmy; použité jednoprůchodové nebo víceprůchodové komprimační algoritmy"
+212. Na jakém principu fungují statistické metody komprese?;délka kódu dle pravděpodobnosti výskytu (Huffmanovo kódování, aritmetické kódování…)
+213. sekvenční metody;potlačení či redukce nul nebo znaků (proudová komprese RLE)
+214. slovníkové metody;užívání kódů z vytvořeného slovníku (LZ 77, LZ 78, LZW 84...)
+215. transformační metody;geometrická nebo barevná transformace (JPEG, wavelet komprese, fraktálová komprese)
+216. Napište hlavní druhy kompresních algoritmů a ke každému příklad.;sekvenční KA (proudová RLE), statické KA (Huffmanovo kódování), slovníkové KA (LZ 77), transformační KA (JPEG)
+217. druhy dle vztahu ke komprimovaným datům;bezztrátové komprimační algoritmy (RLE a LZW komprese, Huffmanovo kódování), ztrátové KA (JPEG, wavelet a fraktální komprese)
+218. druhy dle podoby komprese a dekomprese;symetrické KA (proudová RLE, JPEG komprese), asymetrické KA (fraktálová komprese)
+219. druhy dle počtu průchodů souborů;jednoprůchodové KA (metoda potlačení nul), víceprůchodové KA (Huffmanovo kódování)
+220. Na jakém principu funguje a pracuje proudová komprese RLE?;sekvenční metoda komprese, v datovém toku se snaží objevit a redukovat opakující se sekvence znaků - místo sekvenc uložen pouze speciální znak představující indikátor, opakovaný znak a počet opakování
+221. Jaký je vztah mezi skratkami JFIF a JPEG?;JFIF je formát pro obrázky komprimované pomocí standardu JPEG
+222. Jakou barevnou hloubku má PNG a GIF?;GIF 24b a PNG 48b
+223. Popište a vysvělete PNG.;bitmapový formát,  bezztrátová komprese LZW, barevná hloubka až 48b, podporuje alfakanál, chybí podpora animaci, předpokládaný nástupce GIF pro použití na WWW
+224. BMP;"nekomprimovaný, RGB, 24b barvná hloubka, nativní formát Windows, velké subory; soubor obsahuje hlavičku, informační blok, tabulku a pole bitů"
+225. IMG;jeden z prvních grafických formátů se systémem barev RGB (24b barevná hloubka), bezztrátová komprese RLE, dokáže s ním pracovat většina grafických i textových programů
+226. GIF;bezztrátová komprese LZW, 24b barevná hloubka, možná průhlednost jedné barvy, možnost animace, hlavní použití - grafika pro WWW, animace
+227. V jakých charakteristikách se liší GIF a JPEG?;"GIF se používá hlavně pro vytvořenou počítačovou grafiku, JPEG pro fotografie; GIF je komprimovaný bezztrátovou kompresí LZW, JPEG komprimován pomocí standardu JPEG - ztrátová komprese; JPEG může ukládat mnohem větší obrázky než GIF; u GIF možnost animace a průhlednosti"
+228. V jakých charakteristikách se liší BMP a JPEG?;"BMP nekomprimovaný, JPEG komprimovaný; BMP nativní formát Windows"
+229. Jaký je rozdíl mezi MPEG a M-JPEG?;u MPEG nejsou jednotlivé snímky komprimovány jednotlivě jako u starší metody M-JPEG, ale jako celé sekvence v přímé souvislosti s následujícími
+230. Co je IPB u MPEG?;IPB je struktura, MPEG popsuje sekvenci I-, P- a B- snímků jako sekvence či skupiny obrazů
+231. Vyjmenujte 5 vektorových grafických formátů.;AI, CDR, ZMF, FLA, SLD, DXF, DXB
+232. Napište tři metaformáty.;PDF, WMF, EMF, CGM, PS, EPS
+233. Popište a vysvělete PDF.;"metaformát pro přenos nezávisle na platformě, aplikaci, fontech, výstupu a zařízení; podpora hypertextových odkazů a náhledů stránek"
+234. Kolik barev můžou mít tiskárny?;"standardně mají 4 barvy dle CMYK, z kterých míchají další barvy; některé tiskárnymohou mít ale až 10 barev"
+235. V jakých tiskárnách se využívá mechanické energie?;impaktní, jehličkové
+236. Vyjmenuj hlavní druhy tiskáren.;jehličková, inkoustová, laserová, impaktní, tepelné, LED, s pevným inkoustem, 3D tiskárny
+237. princip impaktních tiskáren;v tiskárně soustava kladívek, ty úderem přes barvící pásku tisknou svůj bod
+238. výhody jehličkových tiskáren;nízká pořizovací cena a cena za vytištěnou stránku, možnost tisku na tabelační papír nebo i na jiná média, možnost průpisu, robusní konstrukce, možnost práce v prašném prostředí bez ohledu na teplotu
+239. nevýhody jehličkových tiskáren;nízká kvalita tisku a rychlost, problematický tisk grafiky, vysoká hlučnost při tisku
+240. princip jehličkových tiskáren;"na tiskové hlavě jehličky, které jsou připojeny k elektromagnetům; ty je při tisku vystřelují proti barvící pásce; barvící páska v daném bodě dopadne na papír a vytiskne bod"
+241. Rozdělte jehličkové tiskárny dle počtu jehliček.;"≤ 7 jehličkové - jeden sloupec jehel - použití tam, kde nezáleží na kvalitě tisku (např. pokladny); 9 nebo 18 jličkové - 1 nebo 2 sloupce jehel - méně kvalitní rychlejší tisk, vhodný pro průklepy; 24 jehličkové - 2 sloupce jehel - kvalitnější a rychlejší tisk"
+242. Princip sublimačních tiskáren;pracují na principu sublimace (odpařování) pevného inkoustu, který po zahřátí přechází do plynné fáze - tak dodán do speciálního papíru, nakonec fixace obrazu ochrannou vrstvou
+243. výhody sublimačních tiskáren;velmi kvalitní barevný tisk s plynulými barevnými přechody bez tiskového rastru při nízkém fyzickém rozlišení 300 dpi, malé rozměry, mobilní provedení, možnost napájení z baterie
+244. nevýhody sublimačních tiskáren;nutnost použití speciálního papíru, vašší cena za stránku, relativně pomalý tisk
+245. výhody inkoustových tiskáren;relativně nízká pořizovací cena, možnost barevného tisku při dobrém poměru cena-výkon, vysoké rozlišení tisku, vysoká kvalita fototisku, relativně vysoká rychlost ČB tisku
+246. nevýhody inkoustových tiskáren;cena za vytištěnou stránku, poměrně nízká životnost cartridge (nádržek)
+247. princip inkoustových tiskáren;tisk prováděn pomocí inoustu, který je prostřednictvím miniaturních trysek v tiskové hlavě po kapkách vystřelován na papír
+248. Jaký typ inkoustových tiskáren může mít při stejném výkonu méně trysek?;piezoelektrické tiskárny (není nutné čekat na ochlazení tepelného rezistoru)
+249. Jaké druhy inkoustů používají inkoustové tiskárny?;tekuté a pevné
+250. Jak rozlišujeme inkoustové tiskárny?;s kontinuálním proudem inkoustu a s tvorbou kapek na vyžádání, ty pak ještě rozdělujeme na tepelné inkoustové tiskárny a piezoelektrické tiskárny
+251. Popište princip tisku u tiskáren používajících technologii tisku thermal-technology.;"typ inkoustových tiskáren, používají k vystříknutí kapky inkoustu z trysky topné tělísko (rezistor); rezistor prudce zahřeje inkoust v dutině trysky - tam vzniká bublina přehřáté páry, která vytlačuje inkoust - dojde k vystřelení inkoustu na papír - v dutině trysky vzniká ochlazením podtlak, který způsobí její další naplnění"
+252. princip tisku u piezoelektrických tiskáren;využívají k vystříknutí kapky inkoustu piezo krystal - do něj je zaveden elektrický proud, ktterý způsobí jeho prohnutí a následné vystříknutí kapky
+253. výhody laserových tiskáren;kvalitní tisk, obrysová ostrost čárové grafiky, rychlost tisku, nevyžaduje speciální papír
+254. nevýhody laserových tiskáren;vyšší pořizovací cena, pro běžného uživatele hůře dostupný kvalitní barevný tisk
+255. princip laserových tiskáren;"dle dat deflektor propouští či nepropouští světlo, mění tak odpor na rotujícím válci; dále veden do toneru, kde se barva přichytává jen na místa se změněným nábojem, který se pak tiskne"
+256. Jakou techniku/metodu tisku používá ČB-laserová tiskárna k vytištění šedotónového obr.?;tisk metodou vzorů (shluková matice), tisk ve frekvenčně modulovaném rasteru
+257. Které tiskárny potřebují elektromagnetický náboj?;laserové
+258. Jaký je rozdíl mezi laserovými a LED tiskárnami?;namísto laseru jsou LED tiskárny vybaveny sadou LED diod, které jsou schopny nabít určitá místa na válci statickou elektřinou, výhodou nižší cena, oproti laserovým tiskárnám nevýznamně nižší kvalita tisku
+259. Princip voskové tiskárny.;obdoba ofsetového tisku, při tisku se náplně z pevného inkoustu roztaví a v tekuté formě jsou přs trysky tiskové hlavy nastřikovány na odpovídající místa přenosného válce - z válce jsou barvy přeneseny na papír, kde rychle tuhnou
+260. Jaký je rozdíl mezi komunikací PLD a GDI?;"PDL posílá popis stránky, tiskárna musí být vybavena příslušným procesorem; u Windows GDI je vytváření obrazu tištěné stránky prováděno provedeno procesorem počítače, tiskárna sama tudíž nemusí mít procesor a je levnější, tiskne pouze v prostředí Windows"
+261. Jaké druhy komunikace mezi tiskárnou a PC znáte?;ASCII, PDL, Windows GDI
+262. Jaké druhy připojení tiskárny a skeneru s PC znáte a které jsou nejpoužívanější v dnešní době?;"paralelní port, USB, IEEE, Ethrnet, IrDA, Bluetooth, Wi-Fi; dnes - USB a Wi-Fi"
+263. Vyjmenujte druhy plochých monitorů.;LCD pasivní a aktivní, PDP, OLED
+264. Co znamenají zkratky LCD, PDP a OLED?;typy plochých displejů, LCD - Liquid Crystal Display, PDP - Plasma Displey Panel, OLED - Organic Light Emitting Diode
+265. zkratka CRT;typ obrazovky, Cathode Ray Tube
+266. Který typ monitorů se používá při výrobě monitorů s uhlopříčkou nad 100cm?;plazmatické
+267. Jaké znáte druhy displejů a monitorů?;CRT, LCD, PDP, OLED, 3D
+268. U CRT monitorů - non-interlaced režim;neprokládaný režim - jednotlivé obrazové body se vykreslují od bodu v levém horním rohu obrazovky po řádcích postupně k pravému dolnímu rohu
+269. interlaced režim;nejprve se vykreslí jen lidé řádky, až po nich sudé
+270. Co znamená a jaké má jednotky obnovovací frekvence?;"vertikálí frekvence, obnovovací obrazová frekvence; vlastnost monitorů která udává, kolikrát za sekundu se vykreslí celá obrazovka; udává se v Hz"
+271. Jakou úlohu či fci plní tekuté krystaly v LCD displejích?;vytvářejí obraz tak, že se v určitém teplotním rozmezí shlukují do různých nepravidelných tvarů a na základě propouštění nebo blokování zdroje světla vytváří obraz
+272. základní způsoby uspořádání krystalů uvnitř kapaliny;nematická struktura, smektická struktura, cholesterická struktura, diskotická struktura
+273. nematická x smektická struktura;"Nematická – krystaly nemají zcela stejnou délku, jsou navzájem rovnoběžné, ale různě posunuté; Smektická – krystaly mají stejnou délku, leží v rovnoběžných vrstvách a jejich osy jsou navzájem rovnoběžné."
+274. cholesterická x diskonická struktura;"Cholesterická – krystaly jsou uložené rovnoběžně ve vrstvách, ale směry os krystalů v jednotlivých vrstvách jsou pootočené; Diskotická - krystaly jsou ploché, mají tvar disků a připomínají hromádku mincí"
+275. Na jaké technické parametry by se měl dívat kupující LCD monitorů?;velikost (uhlopříčka), svítivost, doba odezvy (náběh), rozlišení (native), připojení, zobrazovací úhel, rozteč bodů
+276. Kolik obrazovek za sec. zobrazí LCD monitor, pokud má náběh 8ms/24ms (dosvit)?;8+24=32, 1/0,032=31,25
+277. Jak se liší LCD displeje s pasivní (STN) a aktivní(TFT) maticí?;"v pasivní matici bod řízen mřížkovou maticí navzájem překřížených vodičů, dlouhá doba odezvy; u aktivní matice každý bod ohraničen dvěma polarizačními filtry, příslušným barevným filtrem a dvěma vyrovnávacími vrstvami, přísluší každému tranzistor(spíše dva)"
+278. Jaký druh displeje označuje zkratka LCD/TFT?;LCD displej s aktivní maticí TFT
+279. Co znamená a jak se značí bodová rozteč?;ukazatel kvality monitorů, udává v mm největší přímo vzdálenost dvou sousedních bodů základní barvy
+280. Jaký je rozdíl uhlopříček LCD a CRT monitorů?;obraz 15' LCD monitorů odpovídá přibližně obrazu 17' CRT monitorů
+281. V čem se udává rozlišovací schopnost monitorů?;"maximální násobek pixelů při maximální obnovovací frekvenci; např 1600x122/78Hz,  1600x1200/92 Hz"
+282. Na čem je založeno a jak funguje 3D zobrazení u tzv. auto-stereoskopických monitorů?;vybavené kamerovým systémem sledujícím oči diváka a posouvajícím prizmovou masku, popř. paralaktická bariéra dovolující vidět pouze info pro levé a pravé oko
+283. Při jakém napětí mezi elektrodami dochází v Polymer OLED k luminescenci;2-5mV
+284. Co všechno můžeme nastavit u grafických karet?;taktovací frekvence, rozlišení, poloha obrazu, jas…
+285. Jaké hlavní parametry charakterizují grafickou kartu?;typ a rychlost grafického čipu, velikost, rychlost a typ paměti, maximální rozlišení…
+286. Z čeho všeho se skládají grafické karty?;grafický procesor, vlastní operační paměť (videopaměť), T&L jednotka, chladiče, rozhraní, chipset s vlasním BIOS, D/A převodník DAC
+287. Co je to videopaměť?;paměť pro odkládání vypočtených framů a odkládání vyrendrovaných částí scény
+288. Zkratka T&L, její význam, kde se s ní můžeme setkat?;"Transform and Light, u grafických karet; schopnost grafické karty stavět scénu z polygonů (v případě 3D scény)"
+289. Co je to sběrnice a z jakých částí se skládá;"skupina signálích vodičů; skládá se z části řídící, datové a adresové; zajišťuje přenos dat a řídících povelů mezi dvěma nebo více elektronickými zařízeními"
+290. V jakých jednotkách se udává grafická akcelerace?;frame za sekundu
+291. Uveďte příklady písma neproporcionálního a proporcionálního.;"neproporcionální: Courier, Courier New; proporcionální: Times New Roman, Calibra"
+292. Jaké se používají měrné systémy při práci s grafikou a dokumentech na počítači?;Fournierův systém, Didotův typografický měrný systém, anglosaský monotypový pica systém, metrický systém
+293. Co je to anglosaský měrný systém?;"měrný systém, jehož základem je anglická stopa; palec je rozdělen na 6 dílků - 1 pica, pica rozdělen na 12 dílků - 1 bod; dodnes se používá v Anglii, USA a Švýcarsku"
+294. Fournierův systém;"vychází z francouzské stopy, která má 12 palců; palec rozdělen na 12 čárek; každá čárka rozdělena na 6 bodů; podle počtu bodů určeny a pojmenovány písmové velikosti"
+295. Didotův typografický měrný systém;"upravený Fournierův systém; základní jednotkou typografický bod, základní délkovou mírou 1 cicero"
+296. Co je to separace a kde se využívá?;"barevná separace znamená oddělení barevných kanálů (např. u techniky čtyřbarvotisku separace CMYK - azurová, purpurová, žlutá a černá); využívá se u některých skenerů, JPEG komprese a u techniky čtyřbarvotisku"
+297. Kolik bitů bude potřeba na pixel pokud využívá 65536 barev?;"2 na xtou = 65536; 2 na 16 = 65536 - 16b"
+298. V jakém režimu nejde používat vektorové editory?;v textovém
+;
